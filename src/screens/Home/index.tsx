@@ -1,10 +1,43 @@
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import {
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+  FlatList,
+} from "react-native";
 import { styles } from "./styles";
 import { Participant } from "../../components/Participant";
 
 export function Home() {
+  const participants = [
+    "Rayanne",
+    "Rodrigo",
+    "Diego",
+    "João Biro",
+    "Vinicius",
+    "Ana",
+    "Carol",
+    "Felipe",
+    "Bruna",
+    "Larissa",
+    "Yuri",
+    "Miguel",
+    "Fernanda",
+    "Raíssa",
+    "Deise",
+    "Arthur",
+    "Rafaela",
+    "Sarah",
+    "Amanda",
+    "Milena",
+  ];
+
   function handleParticipantAdd() {
-    console.log("oi");
+    console.log("adicionado");
+  }
+
+  function handleParticipantRemove() {
+    console.log("removido");
   }
 
   return (
@@ -21,10 +54,24 @@ export function Home() {
           <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
       </View>
-      <Participant />
-      <Participant />
-      <Participant />
-      <Participant />
+      <FlatList
+        keyExtractor={(item) => item}
+        renderItem={({ item }) => (
+          <Participant
+            key={item}
+            name={item}
+            onRemove={handleParticipantRemove}
+          />
+        )}
+        data={participants}
+        showsVerticalScrollIndicator={false}
+        ListEmptyComponent={() => (
+          <Text style={styles.listEmptyText}>
+            Ninguém chegou no evento ainda? Adicione participants a sua lista de
+            presença.
+          </Text>
+        )}
+      />
     </View>
   );
 }
