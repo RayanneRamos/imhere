@@ -16,6 +16,12 @@
 
 [ImHere]() é o primeiro projeto desenvolvido durante o bootcamp ignite da [Rocketseat](https://www.rocketseat.com.br/) que foca nas tecnologias ReactJS, React Native e NodeJS. Consiste em criar uma aplicação para fazer a adição de pessoas a um determinado evento podendo remover as pessoas que não vão mais participar do evento. Disponível nas plataformas Android e IOS.
 
+## 🌟 Funcionalidades
+
+1. **Adição de participantes a um evento de forma rápida e simples** 
+2. **Remoção de participantes que não irão mais comparecer ao evento** 
+3. **Disponível para Android e iOS, garantindo acessibilidade em dispositivos móveis**
+
 ## 🧪 Technologies
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
